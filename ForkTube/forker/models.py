@@ -1,3 +1,12 @@
 from django.db import models
+from django import forms 
+from django.forms import ModelForm
 
-# Create your models here.
+class ForkItem(models.Model):
+    user = forms.CharField(max_length=100)
+    password = forms.CharField(max_length=100)
+    url = forms.CharField(max_length=100)
+
+class ForkItemForm(forms.ModelForm):
+    class Meta:
+        model = ForkItem 
