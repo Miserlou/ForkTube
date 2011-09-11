@@ -7,6 +7,6 @@ class ForkItem(models.Model):
     password = forms.CharField(max_length=100)
     url = forms.CharField(max_length=100)
 
-class ForkItemForm(forms.ModelForm):
+class ForkItemForm(ModelForm):
     class Meta:
         model = ForkItem 

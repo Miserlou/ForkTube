@@ -19,7 +19,14 @@
 								don't have to worry about them disappearing from the internet.
 						</div>
 						<div id="form">
-								{{form.user}}
+								<br />
+								<form enctype="multipart/form-data" action="/" method="post">
+										{% csrf_token %}
+										<input type="text" id="id_url" placeholder="URL to Fork"><br /><br /><br />
+										<input type="text" id="id_username" placeholder="Your Username"><br /><br /><br />
+										<input type="text" id="id_password" placeholder="Your Password"><br /><br /><br />
+										<input type="submit" value="Fork it!" /><br />
+								</form>
 						</div>
 
 		</div>
