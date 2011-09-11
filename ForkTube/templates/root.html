@@ -20,11 +20,11 @@
 						</div>
 						<div id="form">
 								<br />
-								<form enctype="multipart/form-data" action="/" method="post">
+								<form enctype="multipart/form-data" action="." method="POST">
 										{% csrf_token %}
-										<input type="text" id="id_url" placeholder="URL to Fork"><br /><br /><br />
-										<input type="text" id="id_username" placeholder="Your Username"><br /><br /><br />
-										<input type="password" id="id_password" placeholder="Your Password"><br /><br /><br />
+										<input type="url" name="url" id="url" placeholder="URL to Fork"><br /><br /><br />
+										<input type="text" name="username" id="username" placeholder="Your Username"><br /><br /><br />
+										<input type="password" name="pass" id="password" placeholder="Your Password"><br /><br /><br />
 										<input type="submit" value="Fork it!" /><br />
 								</form>
 						</div>
