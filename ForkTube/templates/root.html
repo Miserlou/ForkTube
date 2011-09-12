@@ -2,6 +2,8 @@
 		<head>
 				<link href="/static/style.css" rel="stylesheet" type="text/css" />
 		<title>ForkTube</title>
+		<LINK REL="SHORTCUT ICON" HREF="/static/favicon.ico">
+		<link href='http://fonts.googleapis.com/css?family=Ubuntu' rel='stylesheet' type='text/css'>
 </head>
 <body>
 		<div id="centerer">
@@ -23,7 +25,7 @@
 								<form enctype="multipart/form-data" action="." method="POST">
 										{% csrf_token %}
 										{{form.errors}}
-										<input type="url" name="url" id="url" minlength="3" placeholder="URL to Fork"><br /><br />
+										<br /><input type="url" name="url" id="url" minlength="3" placeholder="URL to Fork"><br /><br />
 										<input type="text" name="user" minlength="3" id="username" placeholder="Your Username"><br /><br />
 										<input type="password" name="password" minlength="3" id="pass" placeholder="Your Password"><br /><br />
 										<input type="submit" value="Fork it!" /><br />
