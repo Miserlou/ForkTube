@@ -22,9 +22,10 @@
 								<br />
 								<form enctype="multipart/form-data" action="." method="POST">
 										{% csrf_token %}
-										<input type="url" name="url" id="url" placeholder="URL to Fork"><br /><br /><br />
-										<input type="text" name="username" id="username" placeholder="Your Username"><br /><br /><br />
-										<input type="password" name="pass" id="password" placeholder="Your Password"><br /><br /><br />
+										{{form.errors}}
+										<input type="url" name="url" id="url" minlength="3" placeholder="URL to Fork"><br /><br />
+										<input type="text" name="user" minlength="3" id="username" placeholder="Your Username"><br /><br />
+										<input type="password" name="password" minlength="3" id="pass" placeholder="Your Password"><br /><br />
 										<input type="submit" value="Fork it!" /><br />
 								</form>
 						</div>

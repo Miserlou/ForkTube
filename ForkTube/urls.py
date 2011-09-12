@@ -6,7 +6,7 @@ from django.conf import settings
 
 urlpatterns = patterns('',
      url(r'^$', 'ForkTube.forker.views.root'),
-     url(r'^forking$', 'ForkTube.forker.views.forking'),
+     url(r'^forking/(?P<hash>[^/]+)$', 'ForkTube.forker.views.forking'),
      url(r'^static/(?P<path>.*)$', 'django.views.static.serve', {'document_root':'../static'}),
      #     url(r'^admin/', include(admin.site.urls)),
 )
