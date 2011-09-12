@@ -68,6 +68,34 @@ body{
 		  padding: 10px
 }
 
+#captcha {
+			width: 350px;
+			font: 24px/120% 'STHeiti','Ubuntu',Gil Sans MT,Helvetica,serif;
+			color: #777;
+			background: #ffffff;
+			outline: none;
+			border-spacing: 0;
+			text-shadow: 0 0 1px #666677;
+		  text-align: center;
+			margin: 0 auto;
+}
+#captcha img{
+			margin: 0 auto;
+			margin-bottom: 30px;
+}
+#captcha input{
+			font: 24px/120% 'STHeiti','Ubuntu',Gil Sans MT,Helvetica,serif;
+			color: #777;
+			background: #ffffff;
+			outline: none;
+			border-spacing: 0;
+			text-shadow: 0 0 1px #666677;
+		  text-align: center;
+			border: 1px solid #000000;
+		  padding: 10px
+			width: 250px;
+}
+
 #centerer{
 		padding-top: 20px;
 		width:960;

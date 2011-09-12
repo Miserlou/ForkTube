@@ -98,8 +98,12 @@ INSTALLED_APPS = (
      'django.contrib.admin',
     # Uncomment the next line to enable admin documentation:
      'django.contrib.admindocs',
+     'captcha',
      'ForkTube.forker',
 )
+
+CAPTCHA_FONT_SIZE = 42
+CAPTCHA_LETTER_ROTATION = None
 
 try:
     from local_settings import *
