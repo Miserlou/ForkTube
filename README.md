@@ -10,4 +10,4 @@ YouTube interation in Python shamelessly stolen from youtube-dl and youtube-uplo
 * OAuth
 * ROT13
 * Manipulate video before upload
-
+* Deploy? Payments?
