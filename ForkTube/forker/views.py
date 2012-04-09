@@ -26,6 +26,7 @@ def root(request):
     else:
         form = ForkItemForm() # An unbound form
 
+    print form
     return render_to_response('root.html', {'form': form}, context_instance=RequestContext(request))
 
 def forking(request, hash):

@@ -2,6 +2,16 @@
 		<head>
 				<link href="/static/style.css" rel="stylesheet" type="text/css" />
 		<title>ForkTube</title>
+		<LINK REL="SHORTCUT ICON" HREF="/static/favicon.ico">
+		<link href='http://fonts.googleapis.com/css?family=Ubuntu' rel='stylesheet' type='text/css'>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"></script>
+<script src="/static/jquery.watermarkinput.js" type="text/javascript"></script>
+<script type="text/javascript">
+   jQuery(function($){
+       $("#id_captcha_1").Watermark('Copy CAPTCHA');
+   });
+</script>
+
 </head>
 <body>
 		<div id="centerer">
@@ -15,17 +25,17 @@
 				</div>
 				<div id="main">
 						<div id="text">
-								<br /><br />ForkTube takes videos from other people on YouTube and moves a copy to your account, so you
-								don't have to worry about them disappearing from the internet.
+								<br />ForkTube takes a video from somebody else on YouTube and moves a copy to your account, so you
+								don't have to worry about it disappearing from the internet.
 						</div>
 						<div id="form">
-								<br />
 								<form enctype="multipart/form-data" action="." method="POST">
 										{% csrf_token %}
 										{{form.errors}}
-										<input type="url" name="url" id="url" minlength="3" placeholder="URL to Fork"><br /><br />
+										<br /><input type="url" name="url" id="url" minlength="3" placeholder="URL to Fork"><br /><br />
 										<input type="text" name="user" minlength="3" id="username" placeholder="Your Username"><br /><br />
 										<input type="password" name="password" minlength="3" id="pass" placeholder="Your Password"><br /><br />
+										<div id="captcha">{% if form.captcha %}{{ form.captcha}}{% endif %}</div><br />
 										<input type="submit" value="Fork it!" /><br />
 								</form>
 						</div>
